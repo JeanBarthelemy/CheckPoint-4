@@ -1,0 +1,53 @@
+﻿<Window x:Class="Checkpoint4WPF.BuyTicketWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Checkpoint4WPF"
+        mc:Ignorable="d"
+        Title="BuyTicketWindow" Height="450" Width="355">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF0E56F0" Offset="0"/>
+            <GradientStop Color="#FFEA2C0E" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Show :" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="16" Margin="60,9,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label Content="Date :" HorizontalAlignment="Left" Margin="21,86,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Grid.RowSpan="2" Grid.Column="1"/>
+        <Label Content="Start Time :" HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Grid.Row="1" Grid.Column="1"/>
+        <Label Content="Price :" HorizontalAlignment="Center" Margin="0,86,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1"/>
+        <Label Content="Quantity :" HorizontalAlignment="Center" Margin="0,29,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Grid.Row="2" Grid.Column="1"/>
+        <Label Content="Total Price :" HorizontalAlignment="Left" Margin="0,72,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Grid.Row="2" Width="96" Grid.ColumnSpan="2" Grid.Column="1" Height="35"/>
+        <TextBlock Name="ShowTitleTxtBlock" HorizontalAlignment="Left" Margin="24,0,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" Width="304" FontSize="14" Grid.ColumnSpan="4" Background="#FFBFBFBF"/>
+        <TextBlock x:Name="DateTxtBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="14,93,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="84" FontSize="14" Background="#FFBFBFBF" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="TimeTxtBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="14,32,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="84" FontSize="14" Background="#FFBFBFBF" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="PriceTxtBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="14,93,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="84" FontSize="14" Background="#FFBFBFBF" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="TotalPriceTxtBlock" Grid.Column="2" HorizontalAlignment="Left" Margin="14,76,0,6" TextWrapping="Wrap" TextAlignment="Center" Width="84" FontSize="14" Background="#FFBFBFBF" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <TextBox Name="QuantityTxtBox" Grid.Column="2" HorizontalAlignment="Left" Margin="14,32,0,52" Grid.Row="2" TextWrapping="Wrap" Width="84" FontSize="14" Foreground="DarkTurquoise"  TextAlignment="Center" PreviewTextInput="NumberValidationTextBox" Grid.ColumnSpan="2"/>
+        <Button Name="ValidateBtn" Content="Validate" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="37" Width="118" FontFamily="Segoe Print" FontSize="16" FontWeight="Bold" Foreground="#FFAA0606" Click="ValidateBtn_Click" Margin="29,0,0,0" Grid.Column="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF364DD6" Offset="0.061"/>
+                    <GradientStop Color="#FFEC382F" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="OkBtn" Content="OK" Grid.Column="3" HorizontalAlignment="Center" Margin="0,33,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.012,-0.026" Height="27" Width="35" Click="OkBtn_Click"/>
+        <Label Content="$" Grid.Column="3" HorizontalAlignment="Left" Margin="14,86,0,0" Grid.Row="1" VerticalAlignment="Top" Height="31" Grid.RowSpan="2" Foreground="White" FontSize="16"/>
+        <Label Content="$" Grid.Column="3" HorizontalAlignment="Left" Margin="14,72,0,0" Grid.Row="2" VerticalAlignment="Top" Height="31" Foreground="White" FontSize="16"/>
+
+    </Grid>
+</Window>
